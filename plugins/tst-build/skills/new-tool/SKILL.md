@@ -18,6 +18,17 @@ The conversation is the valuable part. Take it seriously, but keep it light: a g
 - **Don't write any code until step 5 says you can.** Not a prototype, not a sketch. If they ask, explain that the intake takes a few minutes and protects them as well as TST.
 - **Say the company's name as "TST".** Never "The Smarty Train". Write in British English and never use em-dashes.
 
+## Where you are running
+
+This skill runs in Claude Code, in Cowork, and in Claude chat on the web, desktop and phone. Check what you can do before you start:
+
+- **You can run commands and have a copy of the repository** (Claude Code, usually Cowork): follow every step as written.
+- **You can't** (Claude chat): run the conversation exactly the same way, because it is the valuable part. Then:
+  - In step 2, search with the GitHub connector if one is connected; if not, ask the person what they already know of, and say in the brief that the repositories weren't searched.
+  - In step 5a, show the brief in the chat instead of writing a file.
+  - In step 5b, create the issue with the GitHub connector if it can create issues. Otherwise give the person the brief and the link to paste it into.
+  - **Stop after the intake issue.** Don't scaffold anything, and don't offer to write the tool's code in the chat. Tell the person who builds it next: for a prototype, anyone at TST with Claude Code, starting from the issue; for tiers 1 to 3, the same, once a Development Authority member has added the approval label.
+
 ## Step 1: Understand
 
 Ask these in order, adapting the wording to what they've already told you. Skip any they've already answered.
@@ -66,7 +77,7 @@ Work out the tier from the answers. The higher of "who uses it" and "what data" 
 
 Then the home:
 
-- **Prototype** (tier P): `prototypes/<slug>/` in ProductionSite, kebab-case, with the `brief.md` from step 5a. Prototypes may not store data or call outside services (no Firebase, no `/api` function, no AI or other outside service), and expire after 90 days unless promoted with `/tst-build:promote`. This is decision D10, and ProductionSite's `tools/check-inline-data.js` fails the build if a prototype breaks it.
+- **Prototype** (tier P): `prototypes/<slug>/` in ProductionSite, kebab-case, with the `brief.md` from step 5a. Prototypes may not store data or call outside services (no Firebase, no `/api` function, no AI or other outside service), and expire after 90 days unless promoted with the `promote` skill (`/tst-build:promote` in Claude Code). This is decision D10, and ProductionSite's `tools/check-inline-data.js` fails the build if a prototype breaks it.
 - **Internal** (tier 1, or tier 3 with staff data): tst-internal, following its standard access shape (`docs/platform/access-control-redesign.md` §12 in that repository).
 - **Client-facing** (tier 2, or tier 3 with client data): ProductionSite, in a kebab-case folder with no spaces (`client-name-tool-name/`).
 

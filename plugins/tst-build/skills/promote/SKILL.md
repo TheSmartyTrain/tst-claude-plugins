@@ -13,13 +13,17 @@ A prototype may hold no real personal data and call nothing outside the browser 
 - **Don't move or change any code until step 4 says you can.** The approval comes first.
 - **Never put real personal data in any file,** in the repository or anywhere else. Use synthetic examples.
 
+## Where you are running
+
+If you can't run commands or see a copy of the repository (Claude chat on the web, desktop or phone), do steps 1 to 3 as normal, reading the brief and intake issue through the GitHub connector or asking the person to paste them. In step 4, open the promotion issue with the GitHub connector if it can; otherwise give the person the text and the link. **Then stop.** Moving the code needs someone with Claude Code once the label is on; say so.
+
 ## Step 1: Find the tool and its record
 
 1. Find the tool's folder and its `brief.md`. In ProductionSite a prototype is `prototypes/<slug>/`.
 2. Find its intake issue. Search the repository's issues for `Intake: <name>` or the `intake` label (`gh issue list --label intake --state all`).
 3. Read both, and tell the person in two sentences what the brief says the tool is for.
 
-If there is no `brief.md`, run the `/tst-build:new-tool` conversation first and come back.
+If there is no `brief.md`, run the `new-tool` conversation (`/tst-build:new-tool` in Claude Code) first and come back.
 
 ## Step 2: What changes
 
@@ -34,7 +38,7 @@ Ask, one at a time. Skip any the brief already answers and that the person confi
 
 ## Step 3: Decide the new tier and what it needs
 
-Use the same table as `/tst-build:new-tool`.
+Use the same table as the `new-tool` skill.
 
 | Tier | When | Approval |
 |---|---|---|
