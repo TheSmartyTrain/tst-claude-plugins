@@ -66,7 +66,7 @@ Work out the tier from the answers. The higher of "who uses it" and "what data" 
 
 Then the home:
 
-- **Prototype** (tier P): `prototypes/<slug>/` in ProductionSite. Prototypes may not store data or call outside services, and expire after 90 days unless promoted with `/tst-build:promote`. *(This is the proposed rule, decision D10 in `docs/governance/implementation-plan.md`. If the person's repository has a different confirmed rule, follow that.)*
+- **Prototype** (tier P): `prototypes/<slug>/` in ProductionSite, kebab-case, with the `brief.md` from step 5a. Prototypes may not store data or call outside services (no Firebase, no `/api` function, no AI or other outside service), and expire after 90 days unless promoted with `/tst-build:promote`. This is decision D10, and ProductionSite's `tools/check-inline-data.js` fails the build if a prototype breaks it.
 - **Internal** (tier 1, or tier 3 with staff data): tst-internal, following its standard access shape (`docs/platform/access-control-redesign.md` §12 in that repository).
 - **Client-facing** (tier 2, or tier 3 with client data): ProductionSite, in a kebab-case folder with no spaces (`client-name-tool-name/`).
 
