@@ -7,6 +7,8 @@ TST's shared Claude Code plugins, published as the `tst-tools` marketplace. Owne
 | Piece | What it does | Status |
 |---|---|---|
 | `/tst-build:new-tool` | The intake conversation: understand, look around, data and risk, decide tier and home, hand off with `brief.md` and an intake issue | v0.1 |
+| `/tst-build:promote` | The stage gate: move a prototype out of `prototypes/`, or raise a tool's tier, with the approval issue first and the code move after | v0.2 |
+| `/tst-build:retire` | Retire a tool: redirect old links, remove code, functions and routes, and delete or return its data with a person's explicit yes | v0.2 |
 | `scripts/check-path.sh` | Blocks new paths with spaces and non-kebab-case top-level folders | Built; **off** until stage 2 |
 | `scripts/check-personal-data.js` | Blocks writing content that looks like real personal data | Built; **off** until stage 2 |
 | `templates/github/ISSUE_TEMPLATE/new-tool.yml` | The intake issue form, copied into each code repository | Ready to copy |

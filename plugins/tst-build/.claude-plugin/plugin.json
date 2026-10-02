@@ -1,6 +1,6 @@
 {
   "name": "tst-build",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Start, promote and retire TST tools safely: the /new-tool intake conversation, plus checks that keep paths and personal data in line with TST's standards.",
   "author": { "name": "TST Development Authority" }
 }
