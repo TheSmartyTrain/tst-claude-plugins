@@ -1,0 +1,43 @@
+name: New tool intake
+description: Start a new tool. Usually opened for you by /tst-build:new-tool.
+title: "Intake: "
+labels: ["intake"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill this in, or run `/tst-build:new-tool` in Claude Code and it will open this issue for you.
+        A Development Authority member approves by adding `approved:tier-P`, `approved:tier-1`, `approved:tier-2` or `approved:tier-3`.
+  - type: textarea
+    id: what
+    attributes: { label: What and why, description: "What it is, the outcomes, who uses it, what it replaces or improves, and why the current way isn't good enough." }
+    validations: { required: true }
+  - type: input
+    id: measure
+    attributes: { label: How we'll know it worked }
+  - type: input
+    id: owner
+    attributes: { label: Who will look after it }
+    validations: { required: true }
+  - type: textarea
+    id: related
+    attributes: { label: Related tools, description: "Anything that already exists that this could extend." }
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Proposed tier
+      options: ["P: prototype, no real personal data", "1: internal", "2: client-facing", "3: high risk"]
+    validations: { required: true }
+  - type: dropdown
+    id: home
+    attributes:
+      label: Home
+      options: ["prototypes/ in ProductionSite", "ProductionSite", "tst-internal"]
+    validations: { required: true }
+  - type: textarea
+    id: data
+    attributes: { label: Data, description: "About people (what, or none); the least needed; who is controller; how long it's kept and why; outside services that see it; any health, ethnicity, children, salary or HR data." }
+    validations: { required: true }
+  - type: textarea
+    id: open
+    attributes: { label: Open questions }

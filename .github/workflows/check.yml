@@ -1,0 +1,33 @@
+name: Check plugins
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - name: Validate the marketplace and every plugin
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude plugin validate .
+          for p in plugins/*/; do claude plugin validate "$p"; done
+      - name: Hook script tests
+        run: bash tests/hooks.test.sh
+      - name: No personal data or secrets in this repository
+        run: |
+          # Anything here reaches every Claude user. Fail on real-looking
+          # addresses outside the example domains, or anything key-shaped.
+          ! grep -rInE '[A-Za-z0-9._%+-]+@(gmail|outlook|hotmail|yahoo|icloud|thesmartytrain|wearetst)\.' --exclude-dir=.git . \
+            | grep -v 'check-personal-data.js' \
+            | grep -v 'CODEOWNERS'
+          ! grep -rInE '(sk-ant-[A-Za-z0-9_-]{20,}|sk-[A-Za-z0-9]{32,}|ghp_[A-Za-z0-9]{36}|AKIA[0-9A-Z]{16})' --exclude-dir=.git .

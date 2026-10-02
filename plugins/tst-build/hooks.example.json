@@ -1,0 +1,13 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/check-path.sh\"" },
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/check-personal-data.js\"" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "tst-tools",
+  "description": "TST's shared Claude Code plugins",
+  "owner": { "name": "TST Development Authority" },
+  "plugins": [
+    {
+      "name": "tst-build",
+      "source": "./plugins/tst-build",
+      "description": "Start, promote and retire TST tools safely"
+    }
+  ]
+}
