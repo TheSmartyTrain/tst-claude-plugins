@@ -12,6 +12,10 @@ Retiring a tool well means three things: the data it collected is deleted (or re
 - **Ask one question at a time.** Use plain English, say "TST", write in British English and never use em-dashes.
 - **Don't delete anything until step 3.** Deleting data is the one step that can't be undone, so it needs a person's explicit "yes" with the details in front of them.
 
+## Where you are running
+
+If you can't run commands or see a copy of the repository (Claude chat on the web, desktop or phone), do steps 1 and 2 as normal, using the GitHub connector to look around if one is connected, and write the retirement note in the chat. **Don't do step 3.** Tell the person that removing the code and the data needs someone at TST with Claude Code, and give them the note to hand over.
+
 ## Step 1: What is being retired
 
 1. Find the tool's folder, its `brief.md` and its intake issue, if they exist.

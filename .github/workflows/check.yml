@@ -23,6 +23,8 @@ jobs:
           for p in plugins/*/; do claude plugin validate "$p"; done
       - name: Hook script tests
         run: bash tests/hooks.test.sh
+      - name: Package for the Claude app
+        run: bash tools/package.sh
       - name: No personal data or secrets in this repository
         run: |
           # Anything here reaches every Claude user. Fail on real-looking
