@@ -44,7 +44,7 @@ Use the same table as the `new-tool` skill.
 |---|---|---|
 | **1, internal** | TST staff only | One Development Authority member |
 | **2, client-facing** | Clients, the public, or anyone outside TST | One member; **Sam Green must approve** if a client's people's data is involved |
-| **3, high risk** | Any answer to step 2 question 6 is yes, or AI processes people's personal data, or a client contract restricts the data | Two members; Sam Green must be one if client data is involved; a DPIA is needed |
+| **3, high risk** | Any answer to step 2 question 6 is yes, or AI processes people's personal data, or a client contract restricts the data | One member; **Sam Green must approve** if client data is involved; a DPIA is needed |
 
 Then list what the new tier needs before go-live, as a checklist the person can follow.
 
