@@ -73,7 +73,7 @@ Work out the tier from the answers. The higher of "who uses it" and "what data" 
 | **P, prototype** | No real personal data at all (synthetic or public data only), short-lived, for trying an idea | None. The intake issue is the record |
 | **1, internal** | Used only by TST staff; may hold TST staff or commercial data | One Development Authority member |
 | **2, client-facing** | Used by clients or the public, or collects anything about people outside TST | One member; **Sam Green must approve** if a client's people's data is involved |
-| **3, high risk** | Any answer to step 3 question 6 is yes, or AI processes people's personal data, or a client contract restricts the data | Two members; Sam Green must be one if client data is involved; a DPIA is needed |
+| **3, high risk** | Any answer to step 3 question 6 is yes, or AI processes people's personal data, or a client contract restricts the data | One member; **Sam Green must approve** if client data is involved; a DPIA is needed |
 
 Then the home:
 
